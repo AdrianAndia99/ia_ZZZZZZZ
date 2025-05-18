@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23f08d2ae4cba14087c1ed36193d82b, type: 3}
+  m_Name: NPC1_Guardia
+  m_EditorClassIdentifier: 
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(366,-10)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-0.7071228,125.874741)"},"ID":1,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-835.420532,184.881073)"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"CanSee","NodeData":{"Offset":"(-190.926575,181.599884)"},"ID":3,"Name":"Can
+        See","Instant":true,"SharedGameObjecttarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SingleviewDistance":10,"SinglefieldOfView":120},{"Type":"IsInRestrictedArea","NodeData":{"Offset":"(-18.2557411,182.686829)"},"ID":4,"Name":"Is
+        In Restricted Area","Instant":true,"SharedGameObjectplayer":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"LayerMaskrestrictedLayer":0},{"Type":"MoveTo","NodeData":{"Offset":"(144.943,177.252075)"},"ID":5,"Name":"Move
+        To","Instant":true,"SharedGameObjecttargetObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SinglearriveDistance":1},{"Type":"AlertOrAttack","NodeData":{"Offset":"(274.290833,175.078125)"},"ID":6,"Name":"Alert
+        Or Attack","Instant":true,"SharedGameObjectplayer":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-190.845566,192.727264)"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"CanSee","NodeData":{"Offset":"(-167.40213,165.49826)"},"ID":8,"Name":"Can
+        See","Instant":true,"SharedGameObjecttarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SingleviewDistance":10,"SinglefieldOfView":120},{"Type":"MoveTo","NodeData":{"Offset":"(-6.29107666,173.8316)"},"ID":9,"Name":"Move
+        To","Instant":true,"SharedGameObjecttargetObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SinglearriveDistance":1},{"Type":"Attack","NodeData":{"Offset":"(174.264343,165.498322)"},"ID":10,"Name":"Attack","Instant":true,"SharedGameObjecttarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(343.3391,189.411743)"},"ID":11,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"IsZoneUnderThreat","NodeData":{"Offset":"(-129.009857,203.634216)"},"ID":12,"Name":"Is
+        Zone Under Threat","Instant":true,"SharedTransformdefensePoint":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":null},"SingledetectionRadius":5,"LayerMaskenemyLayer":0},{"Type":"MoveTo","NodeData":{"Offset":"(86.7795944,203.634155)"},"ID":13,"Name":"Move
+        To","Instant":true,"SharedGameObjecttargetObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SinglearriveDistance":1}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(812.8656,170)"},"ID":14,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"GetNextPatrolPoint","NodeData":{"Offset":"(-112.167847,197.31839)"},"ID":15,"Name":"Get
+        Next Patrol Point","Instant":true,"SharedGameObjectListpatrolPoints":{"Type":"BehaviorDesigner.Runtime.SharedGameObjectList","Name":null,"List`1mValue":[]},"SharedTransformcurrentTarget":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":null}},{"Type":"MoveTo","NodeData":{"Offset":"(108.884766,210.476257)"},"ID":16,"Name":"Move
+        To","Instant":true,"SharedGameObjecttargetObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SinglearriveDistance":1}]}]}}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.12
