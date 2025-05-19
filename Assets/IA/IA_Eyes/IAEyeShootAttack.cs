@@ -15,11 +15,11 @@ public class IAEyeShootAttack : IAEyeShoot
     public override void UpdateScan()
     {
         base.UpdateScan();
-        if (ViewEnemy != null)
+        if (ViewThief != null)
         {
-            AttackDataView.IsInSight(ViewEnemy.AimOffset);
-            ShootDataView.IsInSight(ViewEnemy.AimOffset);
-            RadioActionDataView.IsInSight(ViewEnemy.AimOffset);
+            AttackDataView.IsInSight(ViewThief.AimOffset);
+            ShootDataView.IsInSight(ViewThief.AimOffset);
+            RadioActionDataView.IsInSight(ViewThief.AimOffset);
         }
             
         else

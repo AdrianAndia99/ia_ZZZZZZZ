@@ -11,7 +11,7 @@ public class ActionColliderShoot : ActionNodeRange
     }
     public override TaskStatus OnUpdate()
     {
-        if(_IACharacterVehiculo.AIEye.ViewEnemy==null)
+        if(_IACharacterVehiculo.AIEye.ViewThief==null)
           return TaskStatus.Failure;
         IAEyeShoot _IAEyeShoot = ((IAEyeShoot)_IACharacterVehiculo.AIEye);
         if (_IAEyeShoot != null && _IAEyeShoot.ShootDataView.Sight)

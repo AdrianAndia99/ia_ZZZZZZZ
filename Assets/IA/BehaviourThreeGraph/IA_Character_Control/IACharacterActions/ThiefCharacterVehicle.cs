@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-public class GuardCharacterVehicle : IACharacterVehiculo
+
+public class ThiefCharacterVehicle : IACharacterVehiculo
 {
     void Start()
     {

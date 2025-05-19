@@ -205,7 +205,7 @@ public class IAEyeBase : MonoBehaviour
     // protected Collider[] colliders = new Collider[10];
     public DataView mainDataView = new DataView();
     public DataView RadioActionDataView = new DataView();
-    public int CountEnemyView = 0;
+    public int CountThiefView = 0;
     #region Rate
     protected int index = 0;
     protected float[] arrayRate;
@@ -220,34 +220,15 @@ public class IAEyeBase : MonoBehaviour
 
     public bool IsDrawGizmo = false;
     public Transform AimOffset;
-    public Health ViewEnemy;
-    public Health ViewAllie;// { get; set; }
     public Health ViewThief;
+    public Health ViewAllie;// { get; set; }
+    public Health ViewThief2;
     public Vector3 Target { get; set; }
 
    
     
 
     #region Direction and Distance
-    public float DistanceEnemy
-    {
-        get
-        {
-            return (this.ViewEnemy != null) ? (transform.position - this.ViewEnemy.transform.position).magnitude : -1;
-        }
-    }
-    public Vector3 DirectionEnemy
-    {
-        get
-        {
-            if (this.ViewEnemy != null)
-            {
-                return (this.ViewEnemy.transform.position - transform.position).normalized;
-            }
-            return Vector3.zero;
-        }
-    }
-    //*********************
     public float DistanceThief
     {
         get
@@ -266,6 +247,25 @@ public class IAEyeBase : MonoBehaviour
             return Vector3.zero;
         }
     }
+    //*********************
+    /*public float DistanceThief
+    {
+        get
+        {
+            return (this.ViewThief2 != null) ? (transform.position - this.ViewThief2.transform.position).magnitude : -1;
+        }
+    }
+    public Vector3 DirectionThief
+    {
+        get
+        {
+            if (this.ViewThief2 != null)
+            {
+                return (this.ViewThief2.transform.position - transform.position).normalized;
+            }
+            return Vector3.zero;
+        }
+    }*/
     //*********************
     public float DistanceAllied
     {
@@ -332,9 +332,9 @@ public class IAEyeBase : MonoBehaviour
 
         Framerate += Time.deltaTime;
 
-        if (ViewEnemy != null && ((ViewEnemy.IsDead) || (!ViewEnemy.IsCantView)))
+        if (ViewThief != null && ((ViewThief.IsDead) || (!ViewThief.IsCantView)))
         {
-            ViewEnemy = null;
+            ViewThief = null;
         }
 
     }
@@ -343,9 +343,9 @@ public class IAEyeBase : MonoBehaviour
     {
         if (health.HurtingMe != null) return;
         ViewAllie = null;
-        ViewEnemy = null;
+        ViewThief = null;
         Collider[] colliders = Physics.OverlapSphere(transform.position, mainDataView.Distance, mainDataView.Scanlayers);
-        CountEnemyView = 0;
+        CountThiefView = 0;
         count = colliders.Length;
 
         
@@ -366,7 +366,7 @@ public class IAEyeBase : MonoBehaviour
                     Scanhealth.IsCantView &&
                     mainDataView.IsInSight(Scanhealth.AimOffset))
                 {
-                    ExtractViewEnemy(ref min_dist, Scanhealth);
+                    ExtractViewThief(ref min_dist, Scanhealth);
                 }
 
             }
@@ -377,7 +377,7 @@ public class IAEyeBase : MonoBehaviour
 
     }
 
-    private void ExtractViewEnemy(ref float min_dist, Health _health)
+    private void ExtractViewThief(ref float min_dist, Health _health)
     {
         
         if (!IsAllies(_health))
@@ -386,11 +386,11 @@ public class IAEyeBase : MonoBehaviour
             float dist = (transform.position - _health.transform.position).magnitude;
             if (min_dist > dist)
             {
-                ViewEnemy = _health;
+                ViewThief = _health;
                 min_dist = dist;
                  
             }
-            CountEnemyView++;
+            CountThiefView++;
         }
         //else
         //if (_health.gameObject.CompareTag("Player"))

@@ -11,7 +11,7 @@ public class ActionNotColliderRadioAction : ActionNodeRange
     }
     public override TaskStatus OnUpdate()
     {
-        if(_IACharacterVehiculo.AIEye.ViewEnemy==null)
+        if(_IACharacterVehiculo.AIEye.ViewThief==null)
           return TaskStatus.Failure;
 
         IAEyeBase _IAEyeBase = ((IAEyeBase)_IACharacterVehiculo.AIEye);

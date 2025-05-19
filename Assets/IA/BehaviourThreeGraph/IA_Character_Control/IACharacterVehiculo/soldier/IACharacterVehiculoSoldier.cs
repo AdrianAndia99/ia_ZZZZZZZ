@@ -36,14 +36,14 @@ public class IACharacterVehiculoSoldier : IACharacterVehiculo
     public void MoveToStrategy()
     {
         
-        if (AIEye.ViewEnemy == null) return;
+        if (AIEye.ViewThief == null) return;
         Vector3 dir = Vector3.zero; 
         normales = ColliderWall();
         if (normales != Vector3.zero)
             dir = normales;
         else
         {
-            dir = (transform.position - AIEye.ViewEnemy.transform.position).normalized;
+            dir = (transform.position - AIEye.ViewThief.transform.position).normalized;
         }
         Vector3 newPosition = transform.position + dir*2;
         MoveToPosition(newPosition );

@@ -13,7 +13,7 @@ public class ActionNodeViewThief : ActionNodeView
     }
     public override TaskStatus OnUpdate()
     {
-        if(_IACharacterVehiculo.AIEye.ViewEnemy==null)
+        if(_IACharacterVehiculo.AIEye.ViewThief == null)
           return TaskStatus.Failure;
 
         return TaskStatus.Success;

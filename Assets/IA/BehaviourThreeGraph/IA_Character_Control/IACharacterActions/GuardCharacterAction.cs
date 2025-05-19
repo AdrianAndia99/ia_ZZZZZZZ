@@ -24,7 +24,7 @@ public class GuardCharacterAction : IACharacterActionsLand
 
     public void ActChase()
     {
-        if (AIEye.ViewEnemy != null)
+        if (AIEye.ViewThief != null)
         {
             Debug.Log("El guardia persigue al enemigo.");
         }

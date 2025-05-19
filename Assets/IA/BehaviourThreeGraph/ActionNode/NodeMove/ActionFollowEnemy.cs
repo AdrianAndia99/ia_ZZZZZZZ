@@ -28,7 +28,7 @@ public class ActionFollowEnemy : ActionNodeVehicle
             case UnitGame.Guard:
                 if(_IACharacterVehiculo is GuardCharacterVehicle)
                 {
-                    ((GuardCharacterVehicle)_IACharacterVehiculo).MoveToEnemy();
+                    ((GuardCharacterVehicle)_IACharacterVehiculo).MoveToEnemyPosition();
                     ((GuardCharacterVehicle)_IACharacterVehiculo).LookEnemy();
                 }
 

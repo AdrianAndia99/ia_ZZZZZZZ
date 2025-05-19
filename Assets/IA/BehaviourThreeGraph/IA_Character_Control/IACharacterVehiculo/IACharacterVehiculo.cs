@@ -19,8 +19,8 @@ public class IACharacterVehiculo : IACharacterControl
     }
     public virtual void LookEnemy()
     {
-        if (AIEye.ViewEnemy == null) return;
-        Vector3 dir = (AIEye.ViewEnemy.transform.position - transform.position).normalized;
+        if (AIEye.ViewThief == null) return;
+        Vector3 dir = (AIEye.ViewThief.transform.position - transform.position).normalized;
         Quaternion rot = Quaternion.LookRotation(dir);
         rot.x = 0;
         rot.z = 0;
@@ -55,8 +55,8 @@ public class IACharacterVehiculo : IACharacterControl
     }
     public virtual void MoveToEnemy()
     {
-        if (AIEye.ViewEnemy == null) return;
-        MoveToPosition(AIEye.ViewEnemy.transform.position);
+        if (AIEye.ViewThief == null) return;
+        MoveToPosition(AIEye.ViewThief.transform.position);
     }
     public virtual void MoveToAllied()
     {
@@ -65,8 +65,8 @@ public class IACharacterVehiculo : IACharacterControl
     }
     public virtual void MoveToEvadEnemy()
     {
-        if (AIEye.ViewEnemy == null) return;
-        Vector3 dir = (transform.position - AIEye.ViewEnemy.transform.position).normalized;
+        if (AIEye.ViewThief == null) return;
+        Vector3 dir = (transform.position - AIEye.ViewThief.transform.position).normalized;
         Vector3 newPosition = transform.position + dir * 5f;
         MoveToPosition(newPosition);
     }
@@ -79,7 +79,7 @@ public class IACharacterVehiculo : IACharacterControl
     }
     public virtual void MoveToWander()
     {
-        if (AIEye.ViewEnemy != null) return;
+        if (AIEye.ViewThief != null) return;
 
         float distance = (transform.position - positionWander).magnitude;
 

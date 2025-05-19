@@ -26,10 +26,10 @@ public class IACharacterActionsZombie : IACharacterActions
             IAEyeGuardAttack _IAEyeZombieAttack = ((IAEyeGuardAttack)AIEye);
             
             if (_IAEyeZombieAttack != null &&
-                _IAEyeZombieAttack.ViewEnemy != null)
+                _IAEyeZombieAttack.ViewThief != null)
             {
                 
-                _IAEyeZombieAttack.ViewEnemy.Damage(damageZombie, health);
+                _IAEyeZombieAttack.ViewThief.Damage(damageZombie, health);
             }
             
         }
