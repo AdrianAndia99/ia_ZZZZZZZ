@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IAEyeZombieAttack : IAEyeAttack
+public class IAEyeGuardAttack : IAEyeAttack
 {
     
     private void Start()
@@ -31,11 +31,13 @@ public class IAEyeZombieAttack : IAEyeAttack
     {
         mainDataView.CreateMesh();
         AttackDataView.CreateMesh();
+        //RadioActionDataView.CreateMesh();
 
     }
     private void OnDrawGizmos()
     {
         mainDataView.OnDrawGizmos();
         AttackDataView.OnDrawGizmos();
+       // RadioActionDataView.CreateMesh();
     }
 }

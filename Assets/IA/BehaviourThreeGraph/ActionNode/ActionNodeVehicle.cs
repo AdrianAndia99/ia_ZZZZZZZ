@@ -6,7 +6,6 @@ using BehaviorDesigner.Runtime.Tasks;
 public class ActionNodeVehicle : ActionNode
 {
      
-
     public override void OnStart()
     {
         base.OnStart();

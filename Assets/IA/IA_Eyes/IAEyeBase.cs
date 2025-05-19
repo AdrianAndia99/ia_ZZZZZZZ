@@ -222,7 +222,7 @@ public class IAEyeBase : MonoBehaviour
     public Transform AimOffset;
     public Health ViewEnemy;
     public Health ViewAllie;// { get; set; }
-
+    public Health ViewThief;
     public Vector3 Target { get; set; }
 
    
@@ -247,6 +247,26 @@ public class IAEyeBase : MonoBehaviour
             return Vector3.zero;
         }
     }
+    //*********************
+    public float DistanceThief
+    {
+        get
+        {
+            return (this.ViewThief != null) ? (transform.position - this.ViewThief.transform.position).magnitude : -1;
+        }
+    }
+    public Vector3 DirectionThief
+    {
+        get
+        {
+            if (this.ViewThief != null)
+            {
+                return (this.ViewThief.transform.position - transform.position).normalized;
+            }
+            return Vector3.zero;
+        }
+    }
+    //*********************
     public float DistanceAllied
     {
         get

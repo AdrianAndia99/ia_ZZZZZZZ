@@ -15,7 +15,7 @@ public class IACharacterVehiculo : IACharacterControl
     {
         base.LoadComponent();
         positionWander = RandoWander(transform.position, RangeWander);
-        _CalculateDiffuse = GetComponent<CalculateDiffuse>();
+       // _CalculateDiffuse = GetComponent<CalculateDiffuse>();
     }
     public virtual void LookEnemy()
     {
@@ -83,12 +83,12 @@ public class IACharacterVehiculo : IACharacterControl
 
         float distance = (transform.position - positionWander).magnitude;
 
-        if(distance<2)
+        if (distance < 2)
         {
             positionWander = RandoWander(transform.position, RangeWander);
         }
 
-        if(FrameRate>Rate)
+        if (FrameRate > Rate)
         {
             FrameRate = 0;
             positionWander = RandoWander(transform.position, RangeWander);

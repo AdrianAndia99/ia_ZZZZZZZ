@@ -21,6 +21,7 @@ public class IAEyeAttack : IAEyeBase
         {
             AttackDataView.Sight = false;
             mainDataView.Sight = false;
+            //RadioActionDataView.Sight = false;
         }
 
     }

@@ -25,11 +25,11 @@ public class ActionFollowEnemy : ActionNodeVehicle
 
         switch (_UnitGame)
         {
-            case UnitGame.Zombie:
-                if(_IACharacterVehiculo is IACharacterVehiculoZombie)
+            case UnitGame.Guard:
+                if(_IACharacterVehiculo is GuardCharacterVehicle)
                 {
-                    ((IACharacterVehiculoZombie)_IACharacterVehiculo).MoveToEnemy();
-                    ((IACharacterVehiculoZombie)_IACharacterVehiculo).LookEnemy();
+                    ((GuardCharacterVehicle)_IACharacterVehiculo).MoveToEnemy();
+                    ((GuardCharacterVehicle)_IACharacterVehiculo).LookEnemy();
                 }
 
                 break;

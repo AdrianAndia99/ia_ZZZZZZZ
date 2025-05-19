@@ -23,7 +23,7 @@ public class IACharacterActionsZombie : IACharacterActions
         if(FrameRate>Rate)
         {
             FrameRate = 0;
-            IAEyeZombieAttack _IAEyeZombieAttack = ((IAEyeZombieAttack)AIEye);
+            IAEyeGuardAttack _IAEyeZombieAttack = ((IAEyeGuardAttack)AIEye);
             
             if (_IAEyeZombieAttack != null &&
                 _IAEyeZombieAttack.ViewEnemy != null)

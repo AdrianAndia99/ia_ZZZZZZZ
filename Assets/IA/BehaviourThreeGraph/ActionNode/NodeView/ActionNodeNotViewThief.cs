@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviorDesigner.Runtime.Tasks;
 [TaskCategory("MyAI/View")]
-public class ActionNodeViewEnemy : ActionNodeView
+public class ActionNodeNotViewThief : ActionNodeView
 {
      
 
@@ -14,9 +14,9 @@ public class ActionNodeViewEnemy : ActionNodeView
     public override TaskStatus OnUpdate()
     {
         if(_IACharacterVehiculo.AIEye.ViewEnemy==null)
-          return TaskStatus.Failure;
+          return TaskStatus.Success;
 
-        return TaskStatus.Success;
+        return TaskStatus.Failure;
     }
 
 

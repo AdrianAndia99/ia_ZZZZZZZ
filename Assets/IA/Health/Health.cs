@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum TypeAgent { A, B, C, D, E }
+public enum TypeAgent { A, B, C, D, E , F}
 public enum UnitGame
 {
+    Guard,
     Zombie,
     Soldier,
+    Thief,
+    Messenger,
     None
 }
 public class Health : MonoBehaviour

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BehaviorDesigner.Runtime.Tasks;
@@ -8,27 +8,29 @@ public class ActionWander : ActionNodeVehicle
     public override void OnStart()
     {
         base.OnStart();
+        Debug.Log("[ActionWander] OnStart ejecutado. Vehiculo: " + _IACharacterVehiculo);
     }
     public override TaskStatus OnUpdate()
     {
-        if(_IACharacterVehiculo.health.IsDead)
+        Debug.Log("[ActionWander] OnUpdate ejecutado.");
+        if (_IACharacterVehiculo.health.IsDead)
             return TaskStatus.Failure;
 
-        SwitchUnit();
+        SwitchUnit(); // Se ejecutará cada frame
 
-        return TaskStatus.Success;
-
+        return TaskStatus.Success; // 👈 Hace que se siga ejecutando mientras esté activo
     }
+
     void SwitchUnit()
     {
 
 
         switch (_UnitGame)
         {
-            case UnitGame.Zombie:
-                if(_IACharacterVehiculo is IACharacterVehiculoZombie)
+            case UnitGame.Guard:
+                if(_IACharacterVehiculo is GuardCharacterVehicle)
                 {
-                    ((IACharacterVehiculoZombie)_IACharacterVehiculo).MoveToWander();
+                    ((GuardCharacterVehicle)_IACharacterVehiculo).MovePatrol();
                     
                 }
 
