@@ -11,11 +11,24 @@ public class IACharacterVehiculo : IACharacterControl
     Vector3 positionWander;
     float FrameRate = 0;
     float Rate = 4;
+
+    //TEST
+    public Health healt;
+
+    void Start()
+    {
+        LoadComponent(); //TEST
+    }
+
     public override void LoadComponent()
     {
         base.LoadComponent();
         positionWander = RandoWander(transform.position, RangeWander);
         _CalculateDiffuse = GetComponent<CalculateDiffuse>();
+
+        //test
+        if (healt == null)
+            healt = GetComponent<Health>();
     }
     public virtual void LookEnemy()
     {

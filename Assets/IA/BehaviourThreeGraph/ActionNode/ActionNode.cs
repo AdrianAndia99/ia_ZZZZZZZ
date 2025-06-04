@@ -15,5 +15,7 @@ public class ActionNode : Action
         _IACharacterVehiculo = GetComponent<IACharacterVehiculo>();
         _IACharacterActions = GetComponent<IACharacterActions>();
         _UnitGame = _IACharacterVehiculo.health._UnitGame;
+        Debug.Log("IACharacterVehiculo: " + _IACharacterVehiculo);
+        Debug.Log("health: " + (_IACharacterVehiculo != null ? _IACharacterVehiculo.health.ToString() : "null"));
     }
 }
