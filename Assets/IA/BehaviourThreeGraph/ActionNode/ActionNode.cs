@@ -16,6 +16,4 @@ public class ActionNode : Action
         _IACharacterActions = GetComponent<IACharacterActions>();
         _UnitGame = _IACharacterVehiculo.health._UnitGame;
     }
-
-     
 }
