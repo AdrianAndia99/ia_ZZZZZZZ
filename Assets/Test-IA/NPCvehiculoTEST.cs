@@ -7,6 +7,7 @@ public class NPCvehiculoTEST : ActionNodeVehicle
     public override void OnStart()
     {
         base.OnStart();
+        _IACharacterVehiculo.LoadComponent();
 
         if (_IACharacterVehiculo == null)
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class IACharacterVehiculo : IACharacterControl
 {
@@ -23,6 +24,11 @@ public class IACharacterVehiculo : IACharacterControl
     public override void LoadComponent()
     {
         base.LoadComponent();
+
+        //test 
+        if (agent == null)
+            agent = GetComponent<NavMeshAgent>();
+
         positionWander = RandoWander(transform.position, RangeWander);
         _CalculateDiffuse = GetComponent<CalculateDiffuse>();
 
@@ -109,6 +115,11 @@ public class IACharacterVehiculo : IACharacterControl
         FrameRate += Time.deltaTime;
 
 
+        if (agent == null)
+        {
+            Debug.LogError("NavMeshAgent está en null en IACharacterVehiculo");
+            return;
+        }
         MoveToPosition(positionWander);
     }
 }

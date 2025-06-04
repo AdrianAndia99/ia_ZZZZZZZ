@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class IACharacterControl : MonoBehaviour
 {
-    public NavMeshAgent agent { get; set; }
+    protected NavMeshAgent agent { get; set; }
     public Health health { get; set; }
     public IAEyeBase AIEye { get; set; }
 
